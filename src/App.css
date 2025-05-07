@@ -36,27 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
 body {
   background-color: #111;
   color: #fff;
   font-family: "Noto Sans JP", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+  letter-spacing: 0.05em;
 }
 
 .cat-wrapper {
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+  z-index: 0;
 }
 
-.cat-wrapper::after {
-  content: "";
-  width: 120px;
-  height: 40px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent);
-  border-radius: 50%;
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 0;
-  transition: all 0.3s ease-in-out;
+.cat-wrapper img {
+  width: 240px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive padding adjustment for small screens */
+@media (max-width: 576px) {
+  .min-vh-100 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
 }
