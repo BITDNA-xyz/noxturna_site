@@ -1,3 +1,4 @@
+/* Ensure full-height layout across all devices */
 html,
 body,
 #root {
@@ -11,17 +12,15 @@ body {
   color: #fff;
   font-family: "Noto Sans JP", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
-}
-
-.App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  height: 100vh;
 }
 
+/* Optional wrapper in case we need styling later */
+.App {
+  width: 100%;
+}
+
+/* Cat image styling */
 .cat-wrapper {
   position: relative;
   padding-bottom: 5px;
@@ -36,16 +35,27 @@ body {
   filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5));
 }
 
+/* Typography */
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
 p {
   font-size: 1.25rem;
   margin-top: 0.25rem;
   letter-spacing: 0.05em;
 }
 
-/* Optional: Responsive tweak if needed */
+/* Responsive tweaks */
 @media (max-width: 576px) {
   .cat-wrapper img {
     width: 200px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
   }
 
   p {
