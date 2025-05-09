@@ -15,9 +15,14 @@ body {
   text-align: center;
 }
 
-/* Optional wrapper in case we need styling later */
-.App {
-  width: 100%;
+/* Optional wrapper for page-level layout control */
+.page-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
 }
 
 /* Cat image styling */
@@ -60,5 +65,11 @@ p {
 
   p {
     font-size: 1.1rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .cat-wrapper {
+    margin-bottom: 0.75rem;
   }
 }
